@@ -1,0 +1,34 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+  driver-class-name: org.h2.Driver
+  url: jdbc:h2:mem:POCSchema
+  username: sa
+  password:
+  platform: org.hibernate.dialect.H2Dialect
+  #jpa:
+    #spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    #show_sql : true
+    #generate-ddl : true
+    #hibernate:
+     # ddl-auto : create
+
+logging:
+  level:
+    org.springframework.cache: DEBUG
+    web: DEBUG
+
+info:
+  app:
+    name: @project.artifactId@
+    version: @project.version@
+
+fabrick:
+  baseUrl: https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/
+  postMoneyTransfer: https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/
+  auth-schema: S2S
+  api-key: FXOVVXXHVCPVPBZXIJOBGUGSKHDNFRRQJP
+  timeZone: Europe/Rome
+  getAccountTransactions: https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/
