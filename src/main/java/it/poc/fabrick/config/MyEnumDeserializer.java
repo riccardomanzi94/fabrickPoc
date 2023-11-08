@@ -1,4 +1,4 @@
-package it.poc.fabrick.Config;
+package it.poc.fabrick.config;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

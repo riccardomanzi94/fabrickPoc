@@ -1,4 +1,4 @@
-package it.poc.fabrick.Config;
+package it.poc.fabrick.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

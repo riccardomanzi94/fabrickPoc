@@ -1,4 +1,4 @@
-package it.poc.fabrick.Config;
+package it.poc.fabrick.config;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -38,4 +38,5 @@ public class BeansConfig {
                 .paths(PathSelectors.any())
                 .build();
     }
+
 }

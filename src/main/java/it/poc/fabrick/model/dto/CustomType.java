@@ -2,7 +2,7 @@ package it.poc.fabrick.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import it.poc.fabrick.Config.MyEnumDeserializer;
+import it.poc.fabrick.config.MyEnumDeserializer;
 
 import java.io.Serializable;
 

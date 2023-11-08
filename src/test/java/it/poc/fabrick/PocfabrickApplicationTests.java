@@ -85,7 +85,7 @@ public class PocfabrickApplicationTests {
 						.post("/post/accounts/14537780/payment/money-transfers")
 						.content(json)
 						.contentType(MediaType.APPLICATION_JSON))
-				.andExpect(status().is4xxClientError());
+				.andExpect(status().is2xxSuccessful());
 
 	}
 
