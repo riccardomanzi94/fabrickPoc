@@ -1,4 +1,4 @@
-package it.poc.fabrick.dto;
+package it.poc.fabrick.model.dto;
 
 import lombok.Data;
 

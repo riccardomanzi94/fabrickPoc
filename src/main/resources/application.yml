@@ -8,12 +8,12 @@ spring:
   username: sa
   password:
   platform: org.hibernate.dialect.H2Dialect
-  #jpa:
-    #spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-    #show_sql : true
-    #generate-ddl : true
-    #hibernate:
-     # ddl-auto : create
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    show_sql : true
+    generate-ddl : true
+    hibernate:
+      ddl-auto : create
 
 logging:
   level:

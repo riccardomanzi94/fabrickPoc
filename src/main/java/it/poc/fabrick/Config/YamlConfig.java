@@ -2,9 +2,9 @@ package it.poc.fabrick.Config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
-@Component
+@Configuration
 @ConfigurationProperties(prefix = "fabrick")
 @Data
 public class YamlConfig {
