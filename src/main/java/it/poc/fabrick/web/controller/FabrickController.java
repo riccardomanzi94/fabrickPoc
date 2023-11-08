@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiResponses;
 import io.swagger.annotations.Authorization;
 import it.poc.fabrick.config.YamlConfig;
 import it.poc.fabrick.model.dto.MoneyTransferDto;
+import it.poc.fabrick.model.dto.TransactionDto;
 import it.poc.fabrick.service.FabrickService;
 import it.poc.fabrick.service.TransactionService;
 import jakarta.validation.Valid;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDate;
+import java.util.List;
 
 
 @Slf4j
@@ -75,4 +77,8 @@ public class FabrickController {
         return fabrickService.getTransactionsService(accountId,fromAccountingDate,toAccountingDate);
     }
 
+    @GetMapping(value = "get/transactions")
+    public List<TransactionDto> getAllTransactionFromDB(){
+        return fabrickService.getAllTransactionsFromDB();
+    }
 }

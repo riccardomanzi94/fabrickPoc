@@ -4,9 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import it.poc.fabrick.config.YamlConfig;
+import it.poc.fabrick.mapper.TransactionMapper;
 import it.poc.fabrick.model.dto.MoneyTransferDto;
 import it.poc.fabrick.model.dto.ResponseTransactionDto;
 import it.poc.fabrick.model.dto.TransactionDto;
+import it.poc.fabrick.model.entities.Transaction;
+import it.poc.fabrick.repository.TransactionRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
@@ -32,6 +35,12 @@ public class FabrickService {
 
     @Autowired
     private TransactionService transactionService;
+
+    @Autowired
+    private TransactionRepository transactionRepository;
+
+    @Autowired
+    private TransactionMapper transactionMapper;
 
     public ResponseEntity<?> getBalanceService(String accountId){
 
@@ -120,6 +129,13 @@ public class FabrickService {
 
         log.info("FabrickService - getTransactionsService - END");
         return new ResponseEntity<>(response.getBody(),response.getStatusCode());
+    }
+
+    public List<TransactionDto> getAllTransactionsFromDB(){
+
+        List<Transaction> transactionList = transactionRepository.findAll();
+        log.info("FabrickService - getAllTransactionsFromDB - Recuperati " + transactionList.size() + " elementi");
+        return transactionMapper.listModelToListDto(transactionRepository.findAll());
     }
 
     //Funzione utilizzata per la creazione dei vari headers alle API Rest Fabrick
