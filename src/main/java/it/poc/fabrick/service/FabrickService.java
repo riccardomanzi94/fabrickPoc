@@ -145,6 +145,7 @@ public class FabrickService {
         httpHeaders.set("Auth-Schema", yamlConfig.getAuthSchema());
         httpHeaders.set("Api-Key", yamlConfig.getApiKey());
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+        httpHeaders.set("X-Time-Zone",yamlConfig.getTimeZone());
         return new HttpEntity<>(httpHeaders);
     }
 }
