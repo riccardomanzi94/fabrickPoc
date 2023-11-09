@@ -27,8 +27,6 @@ info:
 
 fabrick:
   baseUrl: https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/
-  postMoneyTransfer: https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/
   auth-schema: S2S
   api-key: FXOVVXXHVCPVPBZXIJOBGUGSKHDNFRRQJP
   timeZone: Europe/Rome
-  getAccountTransactions: https://sandbox.platfr.io/api/gbs/banking/v4.0/accounts/
